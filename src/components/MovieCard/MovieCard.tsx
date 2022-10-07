@@ -5,15 +5,8 @@ type Props = {
 };
 
 const MovieCard = ({ movie }: Props) => {
-  const {
-    id,
-    popularity,
-    title,
-    backdrop_path,
-    poster_path,
-    vote_count,
-    release_date,
-  } = movie;
+  const { id, popularity, title, poster_path, vote_count, release_date } =
+    movie;
 
   return (
     <div>
