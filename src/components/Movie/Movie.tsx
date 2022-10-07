@@ -6,6 +6,9 @@ import MovieCard from "../MovieCard/MovieCard";
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
+  const [movieId, setMovieId] = useState({
+    id: "",
+  });
   const { data, isLoading, refetch } = useQuery("movie", () => {
     axios
       .get("https://movie-task.vercel.app/api/popular?page=1")

@@ -1,8 +1,8 @@
 import { movieType } from "./Movie.types";
 
-interface Props {
+type Props = {
   movie: movieType;
-}
+};
 
 const MovieCard = ({ movie }: Props) => {
   const {
@@ -18,6 +18,13 @@ const MovieCard = ({ movie }: Props) => {
   return (
     <div>
       <div className="card card-compact max-w-sm mt-10 bg-base-100 shadow-xl">
+        <figure>
+          <img
+            className="w-full h-[300px]"
+            src={`https://image.tmdb.org/t/p/original${poster_path}`}
+            alt=""
+          />
+        </figure>
         <div className="card-body">
           <h2 className="text-2xl font-[500] ">{title}</h2>
           <p className="font-[500] text-[18px] text-gray-500">
