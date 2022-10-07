@@ -18,10 +18,6 @@ const Movie = () => {
     return <Loading />;
   }
 
-  interface key {
-    id: number;
-  }
-
   return (
     <div className="px-12">
       <div className="grid grid-cols-3">

@@ -1,21 +1,34 @@
+import { movieType } from "./Movie.types";
+
 interface Props {
-  movie: object;
+  movie: movieType;
 }
 
 const MovieCard = ({ movie }: Props) => {
-  console.log(movie);
+  const {
+    id,
+    popularity,
+    title,
+    backdrop_path,
+    poster_path,
+    vote_count,
+    release_date,
+  } = movie;
+
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
-        </figure>
+      <div className="card card-compact max-w-sm mt-10 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+          <h2 className="text-2xl font-[500] ">{title}</h2>
+          <p className="font-[500] text-[18px] text-gray-500">
+            popularity: <span className="text-[15px]">{popularity}</span>
+          </p>
+          <p className="font-[500] text-[18px] text-gray-500">
+            Release date: <span className="text-[15px]">{release_date}</span>
+          </p>
+          <p className="font-[500] text-[18px] text-gray-500">
+            Total vote: <span className="text-[15px]">{vote_count}</span>
+          </p>
         </div>
       </div>
     </div>
