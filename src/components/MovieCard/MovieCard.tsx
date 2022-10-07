@@ -1,4 +1,9 @@
-const MovieCard = () => {
+interface Props {
+  movie: object;
+}
+
+const MovieCard = ({ movie }: Props) => {
+  console.log(movie);
   return (
     <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
