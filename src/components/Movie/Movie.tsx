@@ -30,7 +30,7 @@ const Movie = () => {
   const handleBack = () => {
     setPage(page - 1);
     axios
-      .get(`https://movie-task.vercel.app/api/popular?page=${page}`)
+      .get(`https://movie-task.vercel.app/api/popular?page=${page - 1}`)
       .then((res) => {
         setMovies(res.data.data.results);
       });
