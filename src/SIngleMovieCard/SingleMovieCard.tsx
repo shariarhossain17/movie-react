@@ -17,7 +17,7 @@ const SingleMovieCard = () => {
 
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="mb-[187px]">
       <button onClick={() => navigate("/")} className="btn btn-primary mt-6">
         Back to home
       </button>
