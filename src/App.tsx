@@ -5,7 +5,7 @@ import SingleMovieCard from "./SIngleMovieCard/SingleMovieCard";
 
 function App() {
   return (
-    <div className="">
+    <div className="px-12">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/movie/:id" element={<SingleMovieCard />}></Route>

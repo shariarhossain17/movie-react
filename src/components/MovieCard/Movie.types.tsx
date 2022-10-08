@@ -8,4 +8,6 @@ export type movieType = {
   poster_path: string;
   backdrop_path: string;
   original_title: string;
+  adult: boolean;
+  overview: string;
 };
