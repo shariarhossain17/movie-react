@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { movieType } from "./Movie.types";
 
 type Props = {
@@ -8,8 +9,9 @@ const MovieCard = ({ movie }: Props) => {
   const { id, popularity, title, poster_path, vote_count, release_date } =
     movie;
 
+  const navigate = useNavigate();
   return (
-    <div>
+    <div onClick={() => navigate(`/movie/${id}`)}>
       <div className="card card-compact max-w-sm mt-10 bg-base-100 shadow-xl">
         <figure>
           <img
